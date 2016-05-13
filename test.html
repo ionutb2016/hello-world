@@ -1,0 +1,202 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>   
+</head>
+
+<body> 
+    <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form id="loginform" class="form-horizontal validateDontSubmit" role="form">
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email" required>                                        
+                                    </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password" required>
+                                    </div>
+                                    
+
+                                
+                            <div class="input-group">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                        </label>
+                                      </div>
+                                    </div>
+
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <button id="btn-login" class="btn btn-default">Login  </button>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account! 
+                                        <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                            Sign Up Here
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+        <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+                                
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                                    
+                                
+                                  
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" placeholder="Email Address" required>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" placeholder="First Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastname" placeholder="Last Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password" required>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="icode" class="col-md-3 control-label">Invitation Code</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="icode" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                        <span style="margin-left:8px;">or</span>
+                                        <button id="btn-fbsignup" type="button" class="btn btn-default"  onclick="$('#signupbox').hide(); $('#loginbox').show()">Back to login</button>  
+                                    </div>
+                                </div>
+                               
+                            </form>
+                         </div>
+                    </div>
+
+               
+               
+                
+         </div> 
+    </div>
+<script>
+
+$(document).ready(function() {
+    $(document).on('submit','.validateDontSubmit',function (e) {
+        //prevent the form from doing a submit
+        e.preventDefault();
+        return false;
+    });
+
+    $('#btn-login').click(function(e){
+      //Leverage the HTML5 validation w/ ajax. Have to submit to get em. Wont actually submit cuz form
+      //has .validateDontSubmit class
+      var $theForm = $(this).closest('form');
+      //Some browsers don't implement checkValidity
+      if (( typeof($theForm[0].checkValidity) == "function" ) && !$theForm[0].checkValidity()) {
+
+         return;
+      }
+      else{
+      //here comes ajax call and answer
+      $(function(){
+            e.preventDefault();
+            $('#btn-login').fadeOut(300);
+            
+            $.ajax({
+              url: 'http://scripting.work/travelfair.com/ajax/',
+              type: 'post',
+              data: {'action': 'login', 'userid': '11239528343'},
+              /*success: function(data, status) {
+                if(data == "ok") {
+                    console.log('avem raspuns');
+                  //$('#followbtncontainer').html('<p><em>Following!</em></p>');
+                  //var numfollowers = parseInt($('#followercnt').html()) + 1;
+                  //$('#followercnt').html(numfollowers);
+                }
+              },*/
+              success: function(data, textStatus, xhr) {
+                    console.log(xhr.status);
+                },
+              complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }, 
+              error: function(xhr, desc, err) {
+                console.log(xhr);
+                console.log("Details: " + desc + "\nError:" + err);
+              }
+            }); // end ajax call
+         
+        });
+      }
+
+    });
+
+});
+
+
+
+
+</script>
+</body>
+</html>
