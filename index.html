@@ -34,17 +34,6 @@
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                         <input id="login-password" type="password" class="form-control" name="password" placeholder="password" required>
                                     </div>
-                                    
-
-                                
-                            <div class="input-group">
-                                      <div class="checkbox">
-                                        <label>
-                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
-                                        </label>
-                                      </div>
-                                    </div>
-
 
                                 <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
@@ -134,12 +123,10 @@
                             </form>
                          </div>
                     </div>
-
-               
-               
-                
-         </div> 
-    </div>
+        </div> 
+        <section id="cursuri" class="row hidden">
+        </section>
+    </div><!-- end container -->
 <script>
 
 $(document).ready(function() {
@@ -163,11 +150,15 @@ $(document).ready(function() {
       $(function(){
             e.preventDefault();
             $('#btn-login').fadeOut(300);
+
+            var userul = $('#login-username').val();
+            var passul = $('#login-password').val();
             
             $.ajax({
-              url: 'http://scripting.work/travelfair.com/ajax/',
+              url: 'http://www.avantajconsulting.ro/api/inscrieri_api.php',
               type: 'post',
-              data: {'action': 'login', 'userid': '11239528343'},
+              dataType: 'json',
+              data: {'username': userul, 'password': passul},
               /*success: function(data, status) {
                 if(data == "ok") {
                     console.log('avem raspuns');
@@ -177,11 +168,15 @@ $(document).ready(function() {
                 }
               },*/
               success: function(data, textStatus, xhr) {
-                    console.log(xhr.status);
+                  //$('#loginbox').hide();
+                  //$('#signupbox').hide();
+
+                  $('#cursuri').html(data);
+                  $('#cursuri').removeClass('hidden');
                 },
-              complete: function(xhr, textStatus) {
+              /*complete: function(xhr, textStatus) {
                     console.log(xhr.status);
-                }, 
+                }, */
               error: function(xhr, desc, err) {
                 console.log(xhr);
                 console.log("Details: " + desc + "\nError:" + err);
