@@ -176,11 +176,11 @@ function ajaxcall(e, datele) {
             $.ajax({
               url: 'http://scripting.work/api/inscrieri_api.php',
               dataType:'jsonp',
-              cache: false,
+              type: "GET",
               jsonp: "callback",
               data: datele,
               success: function(data, textStatus, xhr) {
-                  console.log(data);
+                  alert(data);
                   
                   var stringy = JSON.stringify(data);
                   var obj = jQuery.parseJSON( stringy );
@@ -199,7 +199,7 @@ function ajaxcall(e, datele) {
                     alert(xhr.status);
                 }, 
               error: function(xhr, desc, err) {
-                alert(xhr);
+                //alert(xhr);
                 alert("Details: " + desc + "\nError:" + err);
               }
             }); // end ajax call
