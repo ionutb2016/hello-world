@@ -8,11 +8,11 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="js/bootstrap.min.js"></script>  
 
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="css/materialize.min.css">
+  <!-- Compiled and minified CSS <link rel="stylesheet" href="css/materialize.min.css">-->
+  
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="js/materialize.min.js"></script> 
+  <!-- Compiled and minified JavaScript <script src="js/materialize.min.js"></script>-->
+   
 
 </head>
 
@@ -196,11 +196,11 @@ function ajaxcall(e, datele) {
                   }        
                 },
               complete: function(xhr, textStatus) {
-                    console.log(xhr.status);
+                    alert(xhr.status);
                 }, 
               error: function(xhr, desc, err) {
-                console.log(xhr);
-                console.log("Details: " + desc + "\nError:" + err);
+                alert(xhr);
+                alert("Details: " + desc + "\nError:" + err);
               }
             }); // end ajax call
 }

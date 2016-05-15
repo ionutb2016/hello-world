@@ -5,21 +5,17 @@
         versionCode = "10"
         version     = "1.1.0">
  
-    <name>Update and notification service</name>
+    <name>Ava 001</name>
  
     <description>
         A simple updating app to keep track of the courses.
     </description>
  
     <author href="http://avantajconsulting.ro" email="office@avantajconsulting.ro">
-        Christophe Coenraets
+        Avantaj Consulting App
     </author>
  
-    <feature name="http://api.phonegap.com/1.0/camera"/>
-    <feature name="http://api.phonegap.com/1.0/contacts"/>
-    <feature name="http://api.phonegap.com/1.0/file"/>
-    <feature name="http://api.phonegap.com/1.0/geolocation"/>
-    <feature name="http://api.phonegap.com/1.0/media"/>
+    
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
  
