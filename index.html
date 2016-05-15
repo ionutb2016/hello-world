@@ -191,7 +191,8 @@ function ajaxcall(e, datele) {
                   }
                   else {
                     //console.log(obj);
-                    Materialize.toast(obj.mesaj, 4000) // 4000 is the duration of the toast
+                    alert(obj.mesaj);
+                    //Materialize.toast(obj.mesaj, 4000) // 4000 is the duration of the toast
                   }        
                 },
               complete: function(xhr, textStatus) {
