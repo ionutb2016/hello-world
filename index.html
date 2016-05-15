@@ -180,15 +180,17 @@ function ajaxcall(e, datele) {
               jsonp: "callback",
               data: datele,
               success: function(data, textStatus, xhr) {
-                  //console.log(data);
+                  console.log(data);
                   
                   var stringy = JSON.stringify(data);
                   var obj = jQuery.parseJSON( stringy );
                   
-                  if (obj[0].mesaj == 'gogogo') {
+                  
+                  if (obj.mesaj == 'gogogo') {
                     afiseaza_rezultatele(obj);
                   }
                   else {
+                    //console.log(obj);
                     Materialize.toast(obj.mesaj, 4000) // 4000 is the duration of the toast
                   }        
                 },
