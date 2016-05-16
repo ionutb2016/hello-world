@@ -19,5 +19,8 @@
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
  
-    <access origin="http://scripting.work" subdomains="true" />
+
+    <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
+
+    <access origin="*" subdomains="true" />
 </widget>
