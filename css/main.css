@@ -1,5 +1,183 @@
-#wrapper {
-
-
+@font-face {
+    font-family: KenyanCoffeeRg;
+    src: url('../fonts/kenyan_coffee_rg-webfont.eot');
+    src: url('../fonts/kenyan_coffee_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kenyan_coffee_rg-webfont.woff') format('woff'),
+         url('../fonts/kenyan_coffee_rg-webfont.ttf') format('truetype'),
+         url('../fonts/kenyan_coffee_rg-webfont.svg#kenyan_coffeeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+@font-face{font-family:HaloHandletter;
+       src: url('../fonts/halohandletter-webfont.eot');
+    src: url('../fonts/halohandletter-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/halohandletter-webfont.woff') format('woff'),
+         url('../fonts/halohandletter-webfont.ttf') format('truetype'),
+         url('../fonts/halohandletter-webfont.svg#halohandletterregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}       
 
+
+
+       .grupa_gr1 .textG {background:url('../images/iconite-cursuri/1.png') no-repeat center 26px; }
+       .grupa_gr2 .textG {background:url('../images/iconite-cursuri/3.png') no-repeat center 26px; }
+       .grupa_ind .textG {background:url('../images/iconite-cursuri/4.png') no-repeat center 26px; }
+       .grupa_web1 .textG {background:url('../images/iconite-cursuri/5.png') no-repeat center 26px; }
+       .grupa_web2 .textG {background:url('../images/iconite-cursuri/6.png') no-repeat center 26px; }
+       .grupa_php .textG {background:url('../images/iconite-cursuri/7.png') no-repeat center 26px; }
+       .grupa_java .textG {background:url('../images/iconite-cursuri/8.png') no-repeat center 26px; }
+       .grupa_wdps .textG {background:url('../images/iconite-cursuri/9.png') no-repeat center 26px; }
+       .grupa_foto1 .textG {background:url('../images/iconite-cursuri/10.png') no-repeat center 26px; }
+       .grupa_foto2 .textG {background:url('../images/iconite-cursuri/11.png') no-repeat center 26px; }
+       .grupa_lnx .textG {background:url('../images/iconite-cursuri/12.png') no-repeat center 26px; }
+       .grupa_illu .textG {background:url('../images/iconite-cursuri/14.png') no-repeat center 26px; }
+       .grupa_copii .textG {background:url('../images/iconite-cursuri/16.png') no-repeat center 35px; }
+       .grupa_bs .textG {background:url('../images/iconite-cursuri/13.png') no-repeat center 26px; }
+
+       .grupa_gr1 .textG, .grupa_gr2 .textG, .grupa_ind .textG, .grupa_web1 .textG, .grupa_web2 .textG, .grupa_php .textG, .grupa_java .textG,.grupa_wdps .textG, .grupa_foto1 .textG, .grupa_foto2 .textG, .grupa_lnx .textG, .grupa_bs .textG, .grupa_illu .textG, .grupa_copii .textG { 
+          width: 74px;
+                height: 65px;
+       }
+          
+          .grupa_gr1 .infoG, .grupa_gr2 .infoG, .grupa_ind .infoG, .grupa_web1 .infoG, .grupa_web2 .infoG, .grupa_php .infoG, .grupa_java .infoG,.grupa_wdps .infoG, .grupa_foto1 .infoG, .grupa_foto2 .infoG, .grupa_lnx .infoG,.grupa_bs .infoG, .grupa_illu .infoG, .grupa_copii .infoG {
+                     float: left;
+                     padding-left: 20px;
+                     height: 65px;
+          
+          }
+          
+          .locuri_tabel {
+                     float: right;
+                     font-family: 'Trebuchet MS';
+                     font-size: 12px;
+                     line-height: 22px;
+                     color: #8d8d8d;
+                     font-weight: bold;  
+                     padding: 5px 5px 0 0;
+              }
+       
+       .grupa_gr1, .grupa_gr2, .grupa_ind, .grupa_web1, .grupa_web2, .grupa_php, .grupa_java, .grupa_wdps, .grupa_foto1, .grupa_foto2, .grupa_lnx, .grupa_bs, .grupa_illu, .grupa_copii { 
+         /* width: 372px;*/
+               width: 544px;
+               margin: auto;
+               height: 105px;
+       }
+          
+          .grupa_gr1:hover, .grupa_gr2:hover, .grupa_ind:hover, .grupa_web1:hover, .grupa_web2:hover, .grupa_php:hover, .grupa_java:hover, .grupa_wdps:hover, .grupa_foto1:hover, .grupa_foto2:hover, .grupa_lnx:hover, .grupa_bs:hover, .grupa_illu:hover, .grupa_copii:hover {
+                     background: #eee;
+              }
+       
+              .textG{
+                     /*width:52px;*/
+                     height:110px;
+                     font-family:KenyanCoffeeRg;
+                     font-size:20px;
+                     line-height:20px;
+                     text-align:center;
+                     color:#000;
+                     margin-top:10px;
+                     float:left;
+                     background:url('../images/iconite-cursuri/1.png') no-repeat center 26px;
+                }
+                #grafica_avansati .textG {background-image: url('../images/iconite-cursuri/3.png');}
+                #illustrator .textG {background-image: url('../images/iconite-cursuri/14.png');}
+                #ind .textG {background-image: url('../images/iconite-cursuri/4.png');}
+                #webdesign .textG {background-image: url('../images/iconite-cursuri/5.png');}
+                #webdesignav .textG {background-image: url('../images/iconite-cursuri/6.png');}
+                #php .textG {background-image: url('../images/iconite-cursuri/7.png');}
+                #js .textG {background-image: url('../images/iconite-cursuri/8.png');}
+                #wp .textG {background-image: url('../images/iconite-cursuri/9.png');}
+                #fotografie .textG {background-image: url('../images/iconite-cursuri/10.png');}
+                #fotografiedestudio .textG {background-image: url('../images/iconite-cursuri/11.png');}
+                #bootstrap .textG {background-image: url('../images/iconite-cursuri/13.png');}
+                #curs-seo .textG {background-image: url('../images/iconite-cursuri/15.png');}
+                #cursuri-copii .textG {background-image: url('../images/iconite-cursuri/16.png');}
+              .grupetext{
+                     min-width:175px;
+                     height:22px;
+                     line-height:20px;
+                     margin-left:20px;
+                     margin-top:10px;
+                     font-family:'Rajdhani';
+                     font-size:18px;
+                     float:left;
+                     color: black;
+                }
+                .infoG{
+                     width:276px;
+                     height:80px;
+                     font-family:'Trebuchet MS';
+                     font-size:12px;
+                     line-height:22px;
+                     color:#8d8d8d;
+                  font-weight:bold;
+                  word-spacing:1px;
+                     float:right;
+                     padding-top:5px;
+                     margin-right:2px;
+                 }
+                .textI{
+                     width:53px;
+                     height:110px;
+                     font-family:KenyanCoffeeRg;
+                     font-size:20px;
+                     line-height:20px;
+                     text-align:center;
+                     color:#cccccc;
+                     margin-top:10px;
+                     float:left;
+                     background:url('images/iconite-cursuri/1_gri.png') no-repeat center 26px;
+                }
+                #grafica_avansati .textI {background-image: url('../images/iconite-cursuri/3_gri.png');}
+                #illustrator .textI {background-image: url('../images/iconite-cursuri/14_gri.png');}
+                #ind .textI {background-image: url('../images/iconite-cursuri/4_gri.png');}
+                #webdesign .textI {background-image: url('../images/iconite-cursuri/5_gri.png');}
+                #webdesignav .textI {background-image: url('../images/iconite-cursuri/6_gri.png');}
+                #php .textI {background-image: url('../images/iconite-cursuri/7_gri.png');}
+                #js .textI {background-image: url('../images/iconite-cursuri/8_gri.png');}
+                #wp .textI {background-image: url('../images/iconite-cursuri/9_gri.png');}
+                #fotografie .textI {background-image: url('../images/iconite-cursuri/10_gri.png');}
+                #fotografiedestudio .textI {background-image: url('../images/iconite-cursuri/11_gri.png');}
+                #bootstrap .textI {background-image: url('../images/iconite-cursuri/13_gri.png');}
+                #curs-seo .textI {background-image: url('../images/iconite-cursuri/15_gri.png');}
+                #cursuri-copii .textI {background-image: url('../images/iconite-cursuri/16_gri.png');}
+              .grupetextI{
+                     /*width:190px;*/
+                     height:22px;
+                     line-height:20px;
+                     margin-left:20px;
+                     margin-top:10px;
+                     font-family:'Rajdhani';
+                     font-size:18px;
+                     color:#cccccc;
+                     float:left;
+                }
+                .infoI{
+                     width:276px;
+                     height:80px;
+                     font-family:'Trebuchet MS';
+                     font-size:12px;
+                     line-height:22px;
+                     color:#cccccc;
+                  font-weight:bold;
+                  word-spacing:1px;
+                     float:right;
+                     padding-top:5px;
+                     margin-right:2px;
+                 }
+         .dreapta{
+            width:527px;
+        height:900px;
+               float:right;
+               }
+
+        #cursuri_inscrieri_modificari a:first-child div.grupe {
+           border-top: 0!important;
+       }
+
+       .grupe {
+              height: 131px;   
+              border-bottom: 2px dotted #cccccc;
+              margin-top: 10px;
+       }
