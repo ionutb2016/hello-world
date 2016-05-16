@@ -4,7 +4,7 @@
 <title>aplicatia de aur</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://code.jquery.com http://scripting.work; style-src 'self' 'unsafe-inline' http://code.jquery.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://code.jquery.com http://scripting.work">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://code.jquery.com http://scripting.work https://cdnjs.cloudflare.com/; style-src 'self' 'unsafe-inline' http://code.jquery.com https://cdnjs.cloudflare.com/; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://code.jquery.com http://scripting.work https://cdnjs.cloudflare.com/">
 
 
 <!-- Latest compiled and minified CSS -->
@@ -15,14 +15,13 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>  
 
-  <!-- Compiled and minified CSS <link rel="stylesheet" href="css/materialize.min.css">-->
-  
-
-  <!-- Compiled and minified JavaScript <script src="js/materialize.min.js"></script>-->
-   
-
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
 </head>
 
@@ -192,7 +191,7 @@ function ajaxcall(e, datele) {
               jsonp: 'callback',
               data: datele,
               success: function(data, textStatus, xhr) {
-                  alert(data);
+                  //alert(data);
                   
                   var stringy = JSON.stringify(data);
                   var obj = jQuery.parseJSON( stringy );
@@ -203,12 +202,12 @@ function ajaxcall(e, datele) {
                   }
                   else {
                     //console.log(obj);
-                    alert(obj.mesaj);
-                    //Materialize.toast(obj.mesaj, 4000) // 4000 is the duration of the toast
+                    //alert(obj.mesaj);
+                    Materialize.toast(obj.mesaj, 4000) // 4000 is the duration of the toast
                   }        
                 },
               complete: function(xhr, textStatus) {
-                    alert(xhr.status);
+                    //alert(xhr.status);
                 }, 
               error: function(err) {
                 alert(err.message);

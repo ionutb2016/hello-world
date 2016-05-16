@@ -21,8 +21,9 @@
  
 
     <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
-    
+
     <allow-navigation href="http://scripting.work/api/*" />
     <allow-navigation href="http://code.jquery.com/*" />
+    <allow-navigation href="https://cdnjs.cloudflare.com/*" />
     <access origin="*" />
 </widget>
