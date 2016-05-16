@@ -21,6 +21,7 @@
  
 
     <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
+    <plugin name="org.apache.cordova.device" spec="0.2.3" source="pgb" />
 
     <allow-navigation href="http://scripting.work/api/*" />
     <allow-navigation href="http://code.jquery.com/*" />
@@ -37,7 +38,7 @@
     <preference name="ShowSplashScreenSpinner" value="false" />  
     <preference name="FadeSplashScreen" value="true" />  
     <preference name="FadeSplashScreenDuration" value="1.0" />  
-    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreen" value="screen" />
 
     <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
 
