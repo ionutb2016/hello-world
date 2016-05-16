@@ -1,13 +1,18 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>    
 <title>aplicatia de aur</title>
-<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
-<script src="js/jquery.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://code.jquery.com http://scripting.work; style-src 'self' 'unsafe-inline' http://code.jquery.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://code.jquery.com http://scripting.work">
+
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/main.css">
 <!-- Latest compiled and minified JavaScript -->
+
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>  
 
   <!-- Compiled and minified CSS <link rel="stylesheet" href="css/materialize.min.css">-->
@@ -15,6 +20,9 @@
 
   <!-- Compiled and minified JavaScript <script src="js/materialize.min.js"></script>-->
    
+
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 
 </head>
 
@@ -177,9 +185,11 @@ function ajaxcall(e, datele) {
             
             $.ajax({
               url: 'http://scripting.work/api/inscrieri_api.php',
+              crossDomain: true,
+              contentType: "application/json",
               dataType:'jsonp',
-              type: "GET",
-              jsonp: "callback",
+              type: 'GET',
+              jsonp: 'callback',
               data: datele,
               success: function(data, textStatus, xhr) {
                   alert(data);
@@ -200,69 +210,77 @@ function ajaxcall(e, datele) {
               complete: function(xhr, textStatus) {
                     alert(xhr.status);
                 }, 
-              error: function(xhr, desc, err) {
-                //alert(xhr);
-                alert("Details: " + desc + "\nError:" + err);
+              error: function(err) {
+                alert(err.message);
               }
             }); // end ajax call
 }
 
 
+
+
 $(document).ready(function() {
-    $('#cursuri').hide();
-
-    $(document).on('submit','.validateDontSubmit',function (e) {
-        //prevent the form from doing a submit
-        e.preventDefault();
-        return false;
-    });
 
 
+      $('#cursuri').hide();
+
+      $(document).on('submit','.validateDontSubmit',function (e) {
+          //prevent the form from doing a submit
+          e.preventDefault();
+          return false;
+      });
 
 
 
-    $('#btn-login').click(function(e){
-      //Leverage the HTML5 validation w/ ajax. Have to submit to get em. Wont actually submit cuz form
-      //has .validateDontSubmit class
-      var $theForm = $(this).closest('form');
-      //Some browsers don't implement checkValidity
-      if (( typeof($theForm[0].checkValidity) == "function" ) && !$theForm[0].checkValidity()) {
 
-         return;
-      } else {
-      //here comes ajax call and answer*/
-            var actiunea = $theForm.find('input[name=action]').val();
-            var userul = $('#login-username').val();
-            var passul = $('#login-password').val();
 
-            var data = {'actiunea': actiunea, 'username': userul, 'password': passul};
-            ajaxcall(e, data);
-        }
+      $('#btn-login').click(function(e){
+        //Leverage the HTML5 validation w/ ajax. Have to submit to get em. Wont actually submit cuz form
+        //has .validateDontSubmit class
+        var $theForm = $(this).closest('form');
+        //Some browsers don't implement checkValidity
+        if (( typeof($theForm[0].checkValidity) == "function" ) && !$theForm[0].checkValidity()) {
 
-    });
+           return;
+        } else {
+        //here comes ajax call and answer*/
+              var actiunea = $theForm.find('input[name=action]').val();
+              var userul = $('#login-username').val();
+              var passul = $('#login-password').val();
 
-    $('#btn-signup').click(function(e){
-      //Leverage the HTML5 validation w/ ajax. Have to submit to get em. Wont actually submit cuz form
-      //has .validateDontSubmit class
-      var $theForm = $(this).closest('form');
-      //Some browsers don't implement checkValidity
-      if (( typeof($theForm[0].checkValidity) == "function" ) && !$theForm[0].checkValidity()) {
+              var data = {'actiunea': actiunea, 'username': userul, 'password': passul};
+              ajaxcall(e, data);
+          }
 
-         return;
-      } else {
-      //here comes ajax call and answer*/
-            var actiunea = $theForm.find('input[name=action]').val();
-            var email = $('#register-email').val();
-            var firstname = $('#register-firstname').val();
-            var lastname = $('#register-lastname').val();
-            var passwd = $('#register-passwd').val();
-            var icode = $('#register-icode').val();
+      });
 
-            var data = {'actiunea': actiunea, 'email': email, 'firstname': firstname, 'lastname': lastname, 'parola': passwd, 'codul': icode};
-            ajaxcall(e, data);
-        }
+      $('#btn-signup').click(function(e){
+        //Leverage the HTML5 validation w/ ajax. Have to submit to get em. Wont actually submit cuz form
+        //has .validateDontSubmit class
+        var $theForm = $(this).closest('form');
+        //Some browsers don't implement checkValidity
+        if (( typeof($theForm[0].checkValidity) == "function" ) && !$theForm[0].checkValidity()) {
 
-    });
+           return;
+        } else {
+        //here comes ajax call and answer*/
+              var actiunea = $theForm.find('input[name=action]').val();
+              var email = $('#register-email').val();
+              var firstname = $('#register-firstname').val();
+              var lastname = $('#register-lastname').val();
+              var passwd = $('#register-passwd').val();
+              var icode = $('#register-icode').val();
+
+              var data = {'actiunea': actiunea, 'email': email, 'firstname': firstname, 'lastname': lastname, 'parola': passwd, 'codul': icode};
+              ajaxcall(e, data);
+          }
+
+      });
+
+
+
+
+    
 
 });
 
