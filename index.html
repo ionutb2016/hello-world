@@ -21,7 +21,7 @@
 
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
+<script type="text/javascript" src="phonegap.js"></script>
 </head>
 
 <body>
@@ -129,11 +129,11 @@
 
                                 <div class="form-group">
                                         
-                                    <div class="col-md-offset-3 col-md-12">
+                                    <div class="col-md-12">
                                       <input type="hidden" name="action" value="register">
-                                        <button id="btn-signup" class="btn btn-default waves-effect waves-light"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-                                        <span style="margin-left:8px;">or</span>
-                                        <button id="btn-fbsignup" type="button" class="btn btn-default"  onclick="$('#signupbox').hide(); $('#loginbox').show()">Back to login</button>  
+                                        <button id="btn-signup" class="btn btn-default waves-effect waves-light col-xs-12 col-md-4"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                        <span class="text-center col-xs-12 col-md-4">or</span>
+                                        <button id="btn-fbsignup" type="button" class="btn btn-default col-xs-12 col-md-4"  onclick="$('#signupbox').hide(); $('#loginbox').show()">Back to login</button>  
                                     </div>
                                 </div>
                                
@@ -163,7 +163,7 @@ function afiseaza_rezultatele(obiect) {
   $.each(obiect,function(key,value){
     //console.log(key + "---" + value.clasa);
     if (key != 0) {
-    var untext = "<div class='col-sm-12'><div class='grupe " + value.clasa + "'><div class='textG'>" + value.titlu + "</div><div class='grupetext'><strong>Data incepere: <span class='culoare_curs'>" + value.data_incepere +"</span></strong><br/></div><div class='infoG'> Program: " + value.program + " <br/>Pret: " + value.pret + " lei<br/>Sala de curs: " + value.sala + "</div><div class='locuri_tabel'>Mai sunt: <br/>" + value.locuri + "</div></div></div>";
+    var untext = "<div class='grupe col-xs-12 " + value.clasa + "'><div class='row'><div class='textG col-xs-4'>" + value.titlu + "</div><div class='grupetext col-xs-8'><div class='row'><div class=''><span>Data incepere:</span><span class='culoare_curs'>" + value.data_incepere +"</span></div><div class='infoG'>Program: " + value.program + " <br/>Pret: " + value.pret + " lei<br/>Sala de curs: " + value.sala + "</div></div></div></div><div class='row'><div class='locuri_tabel col-xs-8 pull-right'>Mai sunt: " + value.locuri + "</div></div></div>";
 
     $('#cursuri').append(untext);
     //console.log(untext);

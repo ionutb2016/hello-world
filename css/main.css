@@ -36,13 +36,12 @@
        .grupa_bs .textG {background:url('../images/iconite-cursuri/13.png') no-repeat center 26px; }
 
        .grupa_gr1 .textG, .grupa_gr2 .textG, .grupa_ind .textG, .grupa_web1 .textG, .grupa_web2 .textG, .grupa_php .textG, .grupa_java .textG,.grupa_wdps .textG, .grupa_foto1 .textG, .grupa_foto2 .textG, .grupa_lnx .textG, .grupa_bs .textG, .grupa_illu .textG, .grupa_copii .textG { 
-          width: 74px;
-                height: 65px;
+          width: 76px;
+                height: 90px;
        }
           
           .grupa_gr1 .infoG, .grupa_gr2 .infoG, .grupa_ind .infoG, .grupa_web1 .infoG, .grupa_web2 .infoG, .grupa_php .infoG, .grupa_java .infoG,.grupa_wdps .infoG, .grupa_foto1 .infoG, .grupa_foto2 .infoG, .grupa_lnx .infoG,.grupa_bs .infoG, .grupa_illu .infoG, .grupa_copii .infoG {
                      float: left;
-                     padding-left: 20px;
                      height: 65px;
           
           }
@@ -59,7 +58,7 @@
        
        .grupa_gr1, .grupa_gr2, .grupa_ind, .grupa_web1, .grupa_web2, .grupa_php, .grupa_java, .grupa_wdps, .grupa_foto1, .grupa_foto2, .grupa_lnx, .grupa_bs, .grupa_illu, .grupa_copii { 
          /* width: 372px;*/
-               width: 544px;
+               
                margin: auto;
                height: 105px;
        }
@@ -72,7 +71,7 @@
                      /*width:52px;*/
                      height:110px;
                      font-family:KenyanCoffeeRg;
-                     font-size:20px;
+                     font-size:16px;
                      line-height:20px;
                      text-align:center;
                      color:#000;
@@ -100,12 +99,11 @@
                      margin-left:20px;
                      margin-top:10px;
                      font-family:'Rajdhani';
-                     font-size:18px;
+                     font-size:16px;
                      float:left;
                      color: black;
                 }
                 .infoG{
-                     width:276px;
                      height:80px;
                      font-family:'Trebuchet MS';
                      font-size:12px;
@@ -154,7 +152,7 @@
                      float:left;
                 }
                 .infoI{
-                     width:276px;
+                     /*width:276px;*/
                      height:80px;
                      font-family:'Trebuchet MS';
                      font-size:12px;
@@ -166,18 +164,14 @@
                      padding-top:5px;
                      margin-right:2px;
                  }
-         .dreapta{
-            width:527px;
-        height:900px;
-               float:right;
-               }
+         
 
         #cursuri_inscrieri_modificari a:first-child div.grupe {
            border-top: 0!important;
        }
 
        .grupe {
-              height: 131px;   
+              height: 165px;   
               border-bottom: 2px dotted #cccccc;
               margin-top: 10px;
        }
